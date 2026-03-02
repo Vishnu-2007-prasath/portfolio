@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+
+    <!-- Internal CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: #f4f4f4;
+            text-align: center;
+        }
+
+        header {
+            background: #333;
+            color: white;
+            padding: 30px 0;
+        }
+
+        section {
+            padding: 30px;
+        }
+
+        .card {
+            background: white;
+            margin: 20px auto;
+            padding: 20px;
+            width: 60%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        button {
+            background: #007BFF;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background: #0056b3;
+        }
+
+        #contactInfo {
+            display: none;
+            margin-top: 20px;
+            color: green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Welcome Section -->
+    <header>
+        <h1>Welcome to My Portfolio</h1>
+        <p>Hello! I'm a passionate developer.</p>
+    </header>
+
+    <!-- Portfolio Details -->
+    <section>
+        <div class="card">
+            <h2>About Me</h2>
+            <p>I am a student interested in software development, cybersecurity, and game development.</p>
+
+            <h2>Skills</h2>
+            <p>Python, Unity, Networking, Machine Learning</p>
+
+            <h2>Projects</h2>
+            <p>Context Gravity - Insider Threat Detection System</p>
+        </div>
+
+        <!-- Contact Button -->
+        <button onclick="showContact()">Contact Me</button>
+
+        <!-- Hidden Contact Info -->
+        <div id="contactInfo">
+            <p>✅ Thank you for reaching out!</p>
+            <p>Email: yourname@email.com</p>
+            <p>Phone: +91 XXXXX XXXXX</p>
+        </div>
+    </section>
+
+    <!-- JavaScript -->
+    <script>
+        function showContact() {
+            document.getElementById("contactInfo").style.display = "block";
+        }
+    </script>
+
+</body>
+</html>

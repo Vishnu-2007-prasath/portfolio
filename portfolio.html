@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vishnu Prasath — Dark Knight Portfolio</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700;900&family=Rajdhani:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Cursor -->
+<div id="cursor"></div>
+<div id="cursor-trail"></div>
+<!-- Scroll progress bar -->
+<div id="progress"></div>
+
+<!-- ─── LINKEDIN REDIRECT OVERLAY ─── -->
+<div id="redirect-overlay">
+  <div class="redirect-title">CONNECTING TO LINKEDIN</div>
+  <div class="redirect-sub">ESTABLISHING SECURE CHANNEL</div>
+  <div class="redirect-bar-wrap">
+    <div class="redirect-bar" id="redirect-bar"></div>
+  </div>
+  <div class="redirect-hint">OPENING IN NEW TAB...</div>
+</div>
+
+<!-- Rain -->
+<div id="rain"></div>
+
+<!-- Gotham city silhouette -->
+<svg id="city-bg" viewBox="0 0 1400 400" fill="#f5c518" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMax slice">
+  <rect x="0" y="300" width="60" height="100"/><rect x="50" y="250" width="40" height="150"/>
+  <rect x="80" y="200" width="80" height="200"/><rect x="70" y="180" width="20" height="30"/>
+  <rect x="150" y="270" width="50" height="130"/><rect x="190" y="220" width="70" height="180"/>
+  <rect x="250" y="150" width="100" height="250"/><rect x="270" y="130" width="30" height="30"/>
+  <rect x="340" y="240" width="60" height="160"/><rect x="390" y="190" width="90" height="210"/>
+  <rect x="470" y="260" width="50" height="140"/><rect x="510" y="170" width="120" height="230"/>
+  <rect x="540" y="140" width="40" height="40"/><rect x="620" y="230" width="70" height="170"/>
+  <rect x="680" y="180" width="100" height="220"/><rect x="700" y="150" width="30" height="40"/>
+  <rect x="770" y="250" width="60" height="150"/><rect x="820" y="200" width="80" height="200"/>
+  <rect x="890" y="260" width="50" height="140"/><rect x="930" y="150" width="110" height="250"/>
+  <rect x="1020" y="210" width="70" height="190"/><rect x="1080" y="270" width="55" height="130"/>
+  <rect x="1120" y="180" width="90" height="220"/><rect x="1200" y="240" width="60" height="160"/>
+  <rect x="1250" y="200" width="80" height="200"/><rect x="1320" y="270" width="50" height="130"/>
+  <rect x="1360" y="230" width="40" height="170"/>
+</svg>
+
+<!-- NAV -->
+<nav id="navbar">
+  <span class="nav-monogram" onclick="window.scrollTo({top:0,behavior:'smooth'})">VP</span>
+  <ul class="nav-links">
+    <li><a onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">ABOUT</a></li>
+    <li><a onclick="document.getElementById('skills').scrollIntoView({behavior:'smooth'})">SKILLS</a></li>
+    <li><a onclick="document.getElementById('projects').scrollIntoView({behavior:'smooth'})">PROJECTS</a></li>
+    <li><a onclick="document.getElementById('contact').scrollIntoView({behavior:'smooth'})">CONTACT</a></li>
+    <li><a class="linkedin-nav" onclick="goLinkedIn()">LINKEDIN</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div id="hero">
+  <div class="batsignal-circle"></div>
+  <h1 class="hero-title glitch" data-text="DARK KNIGHT">DARK <span>KNIGHT</span></h1>
+  <p class="hero-sub">DEVELOPER · HACKER · CREATOR</p>
+  <div class="hero-scroll">
+    <div class="scroll-hint" onclick="document.getElementById('about').scrollIntoView({behavior:'smooth'})">
+      <span>DESCEND</span>
+      <div class="arrow"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about">
+  <h2 class="section-title">THE ORIGIN</h2>
+  <div class="about-card">
+    <p>
+      A vigilante of the digital world — by day a student, by night a builder of systems no one asked for but everyone needs.
+      Passionate about software development, cybersecurity, and game development.
+      Like Batman, I operate in the shadows of complex problems, emerging with solutions that strike precisely.
+    </p>
+  </div>
+</section>
+
+<!-- STATS -->
+<section style="padding-top:0">
+  <div class="stats-row">
+    <div class="stat-box"><div class="stat-num" data-target="5">0</div><div class="stat-label">PROJECTS</div></div>
+    <div class="stat-box"><div class="stat-num" data-target="4">0</div><div class="stat-label">LANGUAGES</div></div>
+    <div class="stat-box"><div class="stat-num" data-target="3">0</div><div class="stat-label">DOMAINS</div></div>
+    <div class="stat-box"><div class="stat-num" data-target="100">0</div><div class="stat-label">% COMMITTED</div></div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <h2 class="section-title">ARSENAL</h2>
+  <div class="skills-grid">
+    <div class="skill-card" data-delay="0"><div class="skill-icon">🐍</div><div class="skill-name">PYTHON</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="85"></div></div></div>
+    <div class="skill-card" data-delay="100"><div class="skill-icon">🎮</div><div class="skill-name">UNITY</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="75"></div></div></div>
+    <div class="skill-card" data-delay="200"><div class="skill-icon">🌐</div><div class="skill-name">NETWORKING</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="70"></div></div></div>
+    <div class="skill-card" data-delay="300"><div class="skill-icon">🤖</div><div class="skill-name">MACHINE LEARNING</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="65"></div></div></div>
+    <div class="skill-card" data-delay="400"><div class="skill-icon">🔐</div><div class="skill-name">CYBERSECURITY</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="72"></div></div></div>
+    <div class="skill-card" data-delay="500"><div class="skill-icon">⚡</div><div class="skill-name">PROBLEM SOLVING</div><div class="skill-bar-wrap"><div class="skill-bar" data-width="90"></div></div></div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2 class="section-title">CASE FILES</h2>
+  <div class="projects-grid">
+    <div class="project-card">
+      <span class="project-tag">CYBERSECURITY</span>
+      <h3 class="project-title">Context Gravity</h3>
+      <p class="project-desc">An insider threat detection system that analyzes behavioral patterns to identify anomalies before they become breaches. Silence before the storm.</p>
+    </div>
+    <div class="project-card" style="transition-delay:.15s">
+      <span class="project-tag">GAME DEV</span>
+      <h3 class="project-title">Project Gotham</h3>
+      <p class="project-desc">A Unity-based stealth prototype inspired by the night. Every shadow is a mechanic. Every sound, a weapon.</p>
+    </div>
+    <div class="project-card" style="transition-delay:.3s">
+      <span class="project-tag">ML · RESEARCH</span>
+      <h3 class="project-title">Neural Sentinel</h3>
+      <p class="project-desc">Machine learning model for anomaly classification in network traffic. Trained on chaos, tested against the unknown.</p>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <h2 class="section-title">SIGNAL THE BAT</h2>
+  <div class="contact-wrap">
+    <p>The Batsignal is in the sky. Send a message into the darkness — it will be received.</p>
+    <button class="contact-btn" onclick="toggleContact()">ACTIVATE SIGNAL</button>
+    <div id="contactPanel">
+      <div class="contact-row"><span class="icon">📡</span><span>yourname@email.com</span></div>
+      <div class="contact-row"><span class="icon">📞</span><span>+91 XXXXX XXXXX</span></div>
+      <div class="contact-row"><span class="icon">🦇</span><span>Available: Nighttime Operations</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- LINKEDIN -->
+<section id="linkedin">
+  <h2 class="section-title">THE NETWORK</h2>
+  <div class="linkedin-card">
+    <div class="corner-br"></div>
+    <div class="linkedin-icon-wrap">
+      <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+    </div>
+    <div class="linkedin-name">VISHNU PRASATH</div>
+    <div class="linkedin-handle">linkedin.com/in/vishnu-prasath-0352493b4</div>
+    <p class="linkedin-desc">
+      Connect on LinkedIn — see the full mission log, professional history, and all ongoing operations in one place. Every vigilante needs a network.
+    </p>
+    <div class="linkedin-stats">
+      <div class="li-stat"><div class="li-stat-num">5+</div><div class="li-stat-label">PROJECTS</div></div>
+      <div class="li-stat"><div class="li-stat-num">4+</div><div class="li-stat-label">SKILLS</div></div>
+      <div class="li-stat"><div class="li-stat-num">∞</div><div class="li-stat-label">POTENTIAL</div></div>
+    </div>
+    <button class="linkedin-btn" onclick="goLinkedIn()">
+      <svg viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+      </svg>
+      VIEW LINKEDIN PROFILE
+    </button>
+  </div>
+</section>
+
+<footer>
+  <p>© 2025 VISHNU PRASATH · DARK KNIGHT PORTFOLIO · GOTHAM CITY</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
